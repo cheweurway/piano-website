@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Eu-Rway Chew</title>
+<meta name="description" content="Get in touch with Eu-Rway Chew to book piano performances for weddings and events.">
+
+<!-- Google Fonts: Playfair Display (headings) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Eu-Rway Chew</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <nav aria-label="Primary">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="contact.html" class="nav-cta" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== CONTACT / BOOKING SECTION ===== -->
+  <section class="contact">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p class="section-subtext">Tell me a bit about your event and I'll follow up with availability and pricing.</p>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="event-date">Event Date</label>
+            <input type="date" id="event-date" name="event-date">
+          </div>
+
+          <div class="form-group">
+            <label for="event-type">Event Type</label>
+            <select id="event-type" name="event-type">
+              <option value="">Select one&hellip;</option>
+              <option value="wedding">Wedding</option>
+              <option value="corporate">Corporate</option>
+              <option value="private-party">Private Party</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" autocomplete="address-level2">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+      </form>
+
+      <p class="response-note">I typically respond within 24&ndash;48 hours.</p>
+
+      <div class="social-row">
+        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+        <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Eu-Rway Chew. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

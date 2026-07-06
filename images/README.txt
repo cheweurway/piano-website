@@ -1,16 +1,23 @@
-Images folder — placeholder reference guide
-============================================
+Images folder — drop your photos here
+======================================
 
-This folder is currently empty. The site references the following images
-by filename, styled as gray placeholder boxes until real files are added.
-Drop in real photos using these exact filenames and the placeholder boxes
-will need their CSS backgrounds swapped for <img> tags (see comments in
-styles.css and index.html near each placeholder).
+This folder is currently empty. The site now loads real <img> tags
+pointing at the exact filenames below — just add files with these
+names and they'll appear on the site automatically (no code changes
+needed).
 
-Suggested files to add later:
-- hero-performance.jpg   (large performance photo for the hero section)
-- about-portrait.jpg     (optional secondary portrait for the About section)
+Required files:
+- hero-performance.jpg   (large performance photo, shown on the Home page hero)
+- photo-1.jpg            (Media page photo gallery, 1st photo)
+- photo-2.jpg            (Media page photo gallery, 2nd photo)
+- photo-3.jpg            (Media page photo gallery, 3rd photo)
 
 Recommended sizes:
 - hero-performance.jpg: at least 1600x2000px (portrait orientation), optimized/compressed for web
-- about-portrait.jpg: at least 1200x1200px, optimized/compressed for web
+- photo-1/2/3.jpg: at least 1200x900px (landscape orientation), optimized/compressed for web
+
+Notes:
+- Each image is cropped to fill its box (aspect-ratio + object-fit: cover in styles.css),
+  so exact dimensions don't need to match perfectly — just keep the orientation above.
+- Want more or fewer photos in the Media gallery? Add/remove <img> tags in media.html's
+  "Photos" gallery-grid, using additional filenames like photo-4.jpg, photo-5.jpg, etc.

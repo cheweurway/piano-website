@@ -156,6 +156,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: center;
+  margin-left: auto;
   gap: 5px;
   width: 32px;
   height: 32px;
@@ -213,19 +215,22 @@ img {
 }
 
 .nav-menu a {
-  color: var(--color-text);
+  color: var(--color-accent);
   text-decoration: none;
   font-weight: 500;
 }
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
 }
 
 .nav-cta {
-  color: var(--color-accent) !important;
   font-weight: 700 !important;
+}
+
+.nav-menu a[aria-current="page"] {
+  color: var(--color-text);
 }
 
 /* -----------------------------
@@ -237,7 +242,7 @@ img {
   gap: 2.5rem;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 3rem var(--gutter) var(--section-spacing);
+  padding: 3rem var(--gutter) 1.5rem;
 }
 
 .hero-text h1 {
@@ -257,6 +262,13 @@ img {
   min-height: 320px;
 }
 
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
 /* -----------------------------
    5. About / Bio Section
    ----------------------------- */
@@ -268,28 +280,24 @@ img {
   max-width: 42rem;
 }
 
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
+.about-quote {
+  margin: 2.5rem 0 0;
+  padding: 2rem 0 0 1.5rem;
   border-top: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
 }
 
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.stat-number {
+.about-quote p {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--color-accent);
+  font-size: 1.15rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  max-width: none;
 }
 
-.stat-label {
+.about-quote cite {
+  font-style: normal;
+  font-weight: 600;
   font-size: 0.9rem;
   color: #4A4A4A;
 }
@@ -346,16 +354,36 @@ img {
 }
 
 /* -----------------------------
-   7. Media Section
+   7. Media Page
    ----------------------------- */
 .media {
   padding: var(--section-spacing) 0;
 }
 
-.media-grid {
+.media h1 {
+  font-size: 2.25rem;
+}
+
+.gallery-heading {
+  margin-top: 3rem;
+}
+
+.gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+
+.placeholder-box--photo {
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
+}
+
+.gallery-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .media-placeholder {
@@ -418,6 +446,10 @@ img {
    ----------------------------- */
 .contact {
   padding: var(--section-spacing) 0;
+}
+
+.contact h1 {
+  font-size: 2.25rem;
 }
 
 .contact-form {
@@ -516,12 +548,12 @@ img {
    TABLET — 700px and up
    ========================================================= */
 @media (min-width: 700px) {
-  .stats-row {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .repertoire-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .form-row {
@@ -559,7 +591,7 @@ img {
     flex-direction: row;
     align-items: center;
     padding-top: 4.5rem;
-    padding-bottom: 6rem;
+    padding-bottom: 2.5rem;
   }
 
   .hero-text {
@@ -574,7 +606,7 @@ img {
     font-size: 3.25rem;
   }
 
-  .media-grid {
+  .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
