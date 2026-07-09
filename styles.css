@@ -500,6 +500,17 @@ img {
   margin-top: 0.5rem;
 }
 
+.contact-form-embed {
+  max-width: 576px;
+}
+
+.contact-form-embed iframe {
+  width: 100%;
+  max-width: 576px;
+  border: none;
+  display: block;
+}
+
 .response-note {
   margin-top: 1.5rem;
   color: #4A4A4A;
