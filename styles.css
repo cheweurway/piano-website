@@ -242,7 +242,7 @@ img {
   gap: 2.5rem;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 3rem var(--gutter) 1.5rem;
+  padding: 3rem var(--gutter) 0.5rem;
 }
 
 .hero-text h1 {
@@ -273,11 +273,17 @@ img {
    5. About / Bio Section
    ----------------------------- */
 .about {
-  padding: var(--section-spacing) 0;
+  padding: 0.5rem 0 var(--section-spacing);
 }
 
-.about p {
-  max-width: 42rem;
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 40% center;
+  border-radius: 4px;
+  margin-top: 2.5rem;
 }
 
 .about-quote {
@@ -386,23 +392,43 @@ img {
   border-radius: 6px;
 }
 
-.media-placeholder {
-  aspect-ratio: 16 / 9;
-  background-color: var(--color-placeholder-bg);
-  border: 1px dashed #B8B8B8;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  color: var(--color-placeholder-text);
-  font-weight: 500;
+.video-category-heading {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.15rem;
+  color: var(--color-accent);
 }
 
-.media-icon {
-  font-size: 1.5rem;
-  color: #B8B8B8;
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.video-item {
+  min-width: 0;
+}
+
+.video-embed {
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-title {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* -----------------------------
@@ -555,6 +581,26 @@ img {
   font-size: 0.9rem;
 }
 
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration: underline;
+}
+
+.footer-links .footer-links-divider {
+  margin: 0 0.6rem;
+  color: var(--color-border);
+}
+
 /* =========================================================
    TABLET — 700px and up
    ========================================================= */
@@ -564,6 +610,10 @@ img {
   }
 
   .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -602,7 +652,7 @@ img {
     flex-direction: row;
     align-items: center;
     padding-top: 4.5rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1rem;
   }
 
   .hero-text {
@@ -618,6 +668,10 @@ img {
   }
 
   .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .video-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
